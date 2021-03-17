@@ -25,6 +25,128 @@ const Transactions :React.FC = () => {
                     subtitle={'17/03/2021'}
                     amount={'R$ 125,00'}
                 />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+                
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
+                <HistoryFinanceCard 
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'17/03/2021'}
+                    amount={'R$ 125,00'}
+                />
+
             </Content>
         </Container>
     )
