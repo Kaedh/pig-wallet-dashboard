@@ -6,6 +6,7 @@ import light from './styles/themes/light';
 
 import GlobalStyles from './styles/GlobalStyles';
 import Dashboard from './pages/Dashboard';
+import Transactions from './pages/Transactions';
 import Layout from './components/Layout';
 
 const App :React.FC = () => {
@@ -13,7 +14,7 @@ const App :React.FC = () => {
         <ThemeProvider theme={dark}>
             <GlobalStyles />
             <Layout>
-                <Dashboard />
+                <Transactions />
             </Layout>
         </ThemeProvider>
     )
