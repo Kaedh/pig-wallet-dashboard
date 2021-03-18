@@ -1,7 +1,10 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import ContentHeader from '../../components/contentHeader';
 import SelectInput from '../../components/SelectInput';
 import HistoryFinanceCard from '../../components/HistoryFinanceCard';
+
+import gains from '../../repositories/gains';
+import expenses from '../../repositories/expenses';
 
 import { Container, Content, Filters } from './style';
 
@@ -13,7 +16,19 @@ interface IRouteParams {
     }
 }
 
+interface IData {
+    id: number,
+    description: string;
+    amountFormatted: string;
+    frequency: string;
+    dateFormatted: string;
+    tagColor: string;
+
+}
+
 const Transactions :React.FC<IRouteParams> = ({ match }) => {
+    const [data, setData] = useState<IData[]>([]);
+
     const { type } = match.params;
 
     const title = useMemo( () => {
@@ -38,6 +53,25 @@ const Transactions :React.FC<IRouteParams> = ({ match }) => {
         {value: 2020, label: 2020},
     ];
 
+    const transactionsByCategories = useMemo(() => {
+        return type === 'entradas' ? gains : expenses;
+    }, [type]);
+
+    useEffect(() => {
+        const response = transactionsByCategories.map(item => {
+            return {
+                id: Math.random() * data.length, 
+                description: item.description,
+                amountFormatted: item.amount,
+                frequency: item.frequency,
+                dateFormatted: item.date,
+                tagColor: item.frequency === 'recorrente' ? '#4E41F0' : '#E44C4E',
+            }
+        })
+
+        setData(response); 
+    }, []);
+
     
     return (
         <Container>
@@ -52,12 +86,17 @@ const Transactions :React.FC<IRouteParams> = ({ match }) => {
             </Filters>
 
             <Content>
-                <HistoryFinanceCard 
-                    tagColor={'#E44C4E'}
-                    title={'Conta de Luz'}
-                    subtitle={'17/03/2021'}
-                    amount={'R$ 125,00'}
-                />
+                {   
+                    data.map( item => (
+                        <HistoryFinanceCard 
+                            key={item.id}
+                            tagColor={item.tagColor}
+                            title={item.description}
+                            subtitle={item.dateFormatted}
+                            amount={item.amountFormatted}
+                        />
+                    ))
+                }
 
             </Content>
         </Container>
