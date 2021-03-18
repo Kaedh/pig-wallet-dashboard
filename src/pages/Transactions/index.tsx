@@ -6,6 +6,9 @@ import HistoryFinanceCard from '../../components/HistoryFinanceCard';
 import gains from '../../repositories/gains';
 import expenses from '../../repositories/expenses';
 
+import formatCurrency from '../../utils/formatCurrency';
+import formatDate from '../../utils/formatDate';
+
 import { Container, Content, Filters } from './style';
 
 interface IRouteParams {
@@ -62,9 +65,9 @@ const Transactions :React.FC<IRouteParams> = ({ match }) => {
             return {
                 id: Math.random() * data.length, 
                 description: item.description,
-                amountFormatted: item.amount,
+                amountFormatted: formatCurrency(Number(item.amount)),
                 frequency: item.frequency,
-                dateFormatted: item.date,
+                dateFormatted: formatDate(item.date),
                 tagColor: item.frequency === 'recorrente' ? '#4E41F0' : '#E44C4E',
             }
         })
@@ -72,7 +75,7 @@ const Transactions :React.FC<IRouteParams> = ({ match }) => {
         setData(response); 
     }, []);
 
-    
+        
     return (
         <Container>
             <ContentHeader title={title} lineColor={lineColor}>
